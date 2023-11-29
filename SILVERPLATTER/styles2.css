@@ -1,0 +1,447 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body::-webkit-scrollbar{
+    background-color: silver;
+    border-radius: 25px;
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.482);
+    border-radius: 25px;
+}
+
+header{
+    height: 15vh;
+    color: black;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header>div:nth-child(1){
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    text-align: center;
+}
+
+header>div.mid>div:nth-child(2){
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header>div.mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+header>div:nth-child(3)>button{
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+header>div:nth-child(3)>button:hover{
+    text-decoration: underline;
+}
+
+main{
+    padding:10px 10px 10px 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px; 
+    background-color: black;
+}
+
+main>section{     
+    background-color: white; 
+    padding-left: 20px;
+    padding-right: 20px; 
+    border-radius: 10px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main>section>div.col-1{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+main>section:hover{
+    border-radius: 0;
+    transition: .5s;
+
+}
+
+main>section>div.col-2{
+    background-color: whitesmoke;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+main>section#workers{
+    border-left: 4px solid rgb(255, 115, 0);
+}
+main>section#workers>div.col-1>button{
+    background-color: rgb(255, 115, 0);
+}
+
+
+main>section#customers{
+    border-left: 4px solid rgb(0, 153, 255);
+}
+main>section#customers>div.col-1>button{
+    background-color: rgb(0, 153, 255);
+}
+
+
+main>section#vehicles{
+    border-left: 4px solid rgb(255, 0, 0);
+}
+main>section#vehicles>div.col-1>button{
+    background-color: rgb(255, 0, 0);
+}
+
+
+main>section#products{
+    border-left: 4px solid rgb(255, 0, 221);
+}
+main>section#products>div.col-1>button{
+    background-color: rgb(255, 0, 221);
+}
+
+
+
+main>section#workdone{
+    border-left: 4px solid rgb(0, 255, 85);
+}
+main>section#workdone>div.col-1>button{
+    background-color: rgb(0, 255, 85);
+}
+
+
+
+main>section#visits{
+    border-left: 4px solid rgb(251, 255, 0);
+}
+main>section#visits>div.col-1>button{
+    background-color: rgb(251, 255, 0);
+}
+
+
+
+main>section#sales{
+    border-left: 4px solid rgb(134, 124, 124);
+}
+main>section#sales>div.col-1>button{
+    background-color: rgb(134, 124, 124);
+}
+
+
+
+
+
+
+main>section>div.col-1>a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+main>section>div.col-1>a:hover{
+    text-decoration: underline;
+   
+}
+
+main>section>div.col-1>p{
+    text-align: center;
+    font-size: 18px;
+}
+
+main>section>div.col-1>button{
+    width: 90px;
+    text-align: center;
+    height: 40px;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid black;
+    color: black;
+    font-family: cursive;
+}
+
+
+
+
+
+
+
+/* pop-up inputs*/
+
+
+
+
+input[type="radio"]{
+    cursor: pointer;
+    appearance: none;
+    padding: 6px;
+    background-color: white;
+    border-radius:50%;
+    
+}
+div#products-form>form>div#flex-radio>div#radio>div>label{
+    font-family:'Times New Roman', Times, serif;
+}   
+
+
+input[type="radio"]:checked{
+    background-color: rgb(255, 0, 221);
+}
+
+div#radio{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 110px;
+}
+
+div#workdone-form>form>div>textarea,
+div#visits-form>form>div>textarea{
+    height: 100px;
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+    font-size: 15px;
+    color: rgb(88, 81, 81);
+}
+
+
+.blurred{
+    filter: blur(10px);
+}
+
+.hidden{
+    display: none;
+}
+
+div#workers-form,
+div#customers-form,
+div#vehicles-form,
+div#products-form,
+div#workdone-form,
+div#visits-form,
+div#sales-form{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    left: 50%;
+    top:20%;
+    transform: translate(-50%,-10%);
+    width: 30%;
+}
+
+.accentColor{
+    accent-color: rgb(134, 124, 124);
+}
+
+.centered{
+    text-align: center;
+}
+
+div#workers-form::-webkit-scrollbar{
+    background-color: rgba(255, 115, 0,50%);
+    border-radius: 25px;
+}
+div#workers-form::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 115, 0);
+    border-radius: 25px;
+}
+div#customers-form::-webkit-scrollbar{
+    background-color:  rgba(0, 153, 255,50%);
+    border-radius: 25px;
+}
+div#customers-form::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 153, 255);
+    border-radius: 25px;
+}
+div#workdone-form::-webkit-scrollbar{
+    background-color:  rgba(0, 255, 85,50%);
+    border-radius: 25px;
+}
+div#workdone-form::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 255, 85);
+    border-radius: 25px;
+}
+div#visits-form::-webkit-scrollbar{
+    background-color:  rgba(251, 255, 0,50%);
+    border-radius: 25px;
+}
+div#visits-form::-webkit-scrollbar-thumb{
+    background-color: rgb(251, 255, 0);
+    border-radius: 25px;
+}
+div#sales-form::-webkit-scrollbar{
+    background-color:  rgba(134, 124, 124,50%);
+    border-radius: 25px;
+}
+div#sales-form::-webkit-scrollbar-thumb{
+    background-color: rgb(134, 124, 124);
+    border-radius: 25px;
+}
+
+
+
+
+div#workers-form>form,
+div#customers-form>form,
+div#vehicles-form>form,
+div#products-form>form,
+div#workdone-form>form,
+div#visits-form>form,
+div#sales-form>form{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 60%);
+    color: white;
+   
+}
+
+
+div#workers-form>form>div,
+div#customers-form>form>div,
+div#vehicles-form>form>div,
+div#products-form>form>div,
+div#workdone-form>form>div,
+div#visits-form>form>div,
+div#sales-form>form>div{
+    font-size: 20px;    
+}
+
+div#workers-form>form>div>input,
+div#customers-form>form>div>input,
+div#workers-form>form>div>label,
+div#customers-form>form>div>label,
+div#vehicles-form>form>div>input,
+div#vehicles-form>form>div>label,
+div#products-form>form>div>label,
+div#products-form>form>div>input,
+div#workdone-form>form>div>label,
+div#workdone-form>form>div>input,
+div#visits-form>form>div>label,
+div#visits-form>form>div>input,
+div#sales-form>form>div>input,
+div#sales-form>form>div>input{
+    width: 300px;
+}
+
+div#workers-form>form>div>input,
+div#customers-form>form>div>input,
+div#vehicles-form>form>div>input,
+div#products-form>form>div>input,
+div#workdone-form>form>div>input,
+div#visits-form>form>div>input,
+div#sales-form>form>div>input{
+    height: 35px;
+    border: none;
+    z-index: 5;
+    outline: none;
+    padding-left: 7px;
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(88, 81, 81);
+
+}
+
+div#workers-form>form>div>input:hover,
+div#customers-form>form>div>input:hover,
+div#vehicles-form>form>div>input:hover,
+div#products-form>form>div>input:hover,
+div#workdone-form>form>div>input:hover,
+div#visits-form>form>div>input:hover,
+div#sales-form>form>div>input:hover{
+    border: 1px solid black;
+}
+
+
+
+div#workers-form>form>div>button,
+div#customers-form>form>div>button,
+div#vehicles-form>form>div>button,
+div#products-form>form>div>button,
+div#workdone-form>form>div>button,
+div#visits-form>form>div>button,
+div#sales-form>form>div>button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;    
+    border-radius: 25px;
+   
+}
+
+div#workers-form>form>div>button:hover,
+div#customers-form>form>div>button:hover,
+div#vehicles-form>form>div>button:hover,
+div#products-form>form>div>button:hover,
+div#workdone-form>form>div>button:hover,
+div#visits-form>form>div>button:hover,
+div#sales-form>form>div>button:hover{
+    box-shadow: none;
+    box-shadow: 1px 1px 10px white;
+}
+
+div#workers-form>p,
+div#customers-form>p,
+div#vehicles-form>p,
+div#products-form>p,
+div#workdone-form>p,
+div#visits-form>p,
+div#sales-form>p{
+    cursor: pointer;
+    font-size: 30px;
+    width: fit-content;
+    margin-left: 92.5%;
+    width: 30px;
+    text-align: center;
+    height: 30px;
+}
+
+div#workers-form>p:hover,
+div#customers-form>p:hover,
+div#vehicles-form>p:hover,
+div#products-form>p:hover,
+div#workdone-form>p:hover,
+div#visits-form>p:hover,
+div#sales-form>p:hover{
+    color: white;
+    background-color: rgb(255, 60, 0);
+}
+
+
+div#workers-form>form>div>select{   
+    color: white;
+    font-size: 12px;
+}

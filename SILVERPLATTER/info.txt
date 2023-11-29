@@ -1,0 +1,5 @@
+roll number: 300622032170
+name: Omar Lawah
+Semester: 3
+program: BSc.IT
+Student: regular
